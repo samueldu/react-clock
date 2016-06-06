@@ -36,17 +36,16 @@ var TimerExample = React.createClass({
 
     render: function render() {
 
-        var elapsed = (this.state.elapsed);
-        var seconds = (elapsed);
+        var elapsed = this.state.elapsed;
+        var seconds = elapsed;
 
-        if(seconds >= 100)
+        if(seconds >= 1500)
         {
         	return this.stopCount();
 
         }
         else
         {
-
 	        return React.createElement(
 	            'p',
 	            null,
@@ -54,21 +53,16 @@ var TimerExample = React.createClass({
 	            React.createElement(
 	                'b',
 	                null,
-	                seconds
-	            ),
+	                seconds),
 	            ' segundos.',
-
-						React.createElement(
-						"a",
-						{
-						onClick: this.restart
-						},
-						"Iniciar contagem"
-						)
-					
+				React.createElement(
+				"a",
+				{
+				onClick: this.restart},
+				"Iniciar contagem"
+				)
 	        );
     	}
-
     }
 });
 
